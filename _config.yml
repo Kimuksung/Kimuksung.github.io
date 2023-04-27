@@ -1,7 +1,7 @@
 # Site
 name: "Kimuksung"
 title: "Kimuksung"
-description: "Daga Engineer"
+description: "안녕하세요. 김욱성 블로그입니다."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 url: "https://Kimuksung.github.io"
@@ -28,7 +28,7 @@ authors:
     gravatar: e56154546cf4be74e393c62d1ae9f9d5
     email: kimuksung2@daum.net
     web: https://economic-element-fbb.notion.site/resume-45a7c80083734a6689e2b391f25acbdc
-    description: "My name is Kimuksung, I am DataEngineer and Jekyll. You are currently previewing Jekyll template demo."
+    description: "안녕하세요. 데이터에 관심이 많은 생각하는 주니어 Data Enginner입니다."
   john:
     name: John
     display_name: John    
