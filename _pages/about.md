@@ -18,7 +18,7 @@ comments: False
 <li> 반복적인 업무 자동화하며 동일한 작업이더라도 알고리즘,메모리 신경을 신경 써 작업합니다.</li>
 <li> 상호간에 소통 특히 피드백을 중요시하며 상대방을 항상 존중합니다.</li>
 <li> 주 언어는 Python이며, 현재는 Kubernetes, EMR(Spark)를 학습 중에 있습니다.</li>
-<li> Python, Airflow, Aws, Docker, Redshift, S3, Mongodb, Mssql, Kafka</li></p>
+</p>
 <p></p>
 <br>
 <br>
@@ -27,97 +27,139 @@ comments: False
 <hr>
 <div class="row clearfix">
     <div class="col-xs-12 col-sm-12 col-md-5 no-print">
-        <h4 class="mb-0">데이터 엔지니어</h4>
+        <h4 class="mb-0">Tech Platform team - Data Engineer</h4>
         <div class="subheading mb-3" style="color: gray;">Wclub(소개팅),Five,Baro(키오스크)</div>
         <div class="subheading mb-3">2022.10 - 현재</div>
     </div>
 <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
     <ul style="font-size: 18px;">
         <li>AWS 데이터 플랫폼 구축 및 운영</li>
-        <li>ETL 파이프라인 생성 및 Airflow 스케쥴링</li>
-        <li>Data Warehouse 설계 및 구축</li>
+        <li>ETL,ELT 파이프라인 구성 및 Airflow 배치 작업 자동화</li>
+        <li>OLAP(Data Warehouse,DataMart) 설계 및 구축</li>
+        <li>데이터 대시보드 시각화 </li>
+        <li>Gpt Model을 활용한 CS업무 지원 </li>
     </ul>
     </div>
 </div>
 
 <div class="row clearfix">
     <div class="col-xs-12 col-sm-12 col-md-5 no-print">
-        <h4 class="mb-0">데이터 엔지니어</h4>
+        <h4 class="mb-0">데이터 연구실 - 결제정보팀</h4>
         <div class="subheading mb-3" style="color: gray;">다날</div>
         <div class="subheading mb-3">2021.02 - 2022.04</div>
     </div>
 <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
     <ul style="font-size: 18px;">
-        <li>일별 50만건 결제 데이터셋 구축 및 운영</li>
+        <li>전자계약, 파트너센터 DB(Mssql) 개발 및 운영</li>
         <li>결제 파이프라인 생성 배치 스케쥴링</li>
         <li>결제 승인,취소,조회 Api 관리,담당</li>
+        <li>사내 백오피스 DB 개발 및 운영</li>
     </ul>
     </div>
 </div>
 
-<section id="skills" style="background-color: #eeeeee;">
-    <div class="container px-4">
-        <div class="row gx-4 justify-content-center">
-            <div class="col-lg-10">
-                <a href="#skills"><h1 class="fw-bolder text-center" style="margin-bottom: 40px;"># Skills</h1></a>
-                <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="subheading mb-3">Programing Languages</div>
-                                    <ul class="list-inline dev-icons">
-                                        <div class="list-inline-item">
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="fab fa-python"></i><p style="font-size: 12px; text-align: center;">Python</p></a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            <div class="col-sm-6">
-                                <div class="subheading mb-3">Bigdata Tools</div>
-                                    <ul class="list-inline dev-icons">
-                                        <div class="list-inline-item">
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-apachespark"></i><p style="font-size: 12px; text-align: center;">Spark</p></a>
-                                        </div>
-                                    </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="subheading mb-3">Database</div>
-                                    <ul class="list-inline dev-icons">
-                                        <div class="list-inline-item">
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-mysql"></i><p style="font-size: 12px; text-align: center;">MsSQL</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-mariadb"></i><p style="font-size: 12px; text-align: center;">MongoDB</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-mariadb"></i><p style="font-size: 12px; text-align: center;">Redshift</p></a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            <div class="col-sm-6">
-                                <div class="subheading mb-3">Data Analysis &amp;  Visualization</div>
-                                    <ul class="list-inline dev-icons">
-                                        <div class="list-inline-item">
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-plotly"></i><p style="font-size: 12px; text-align: center;">Plotly</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-flask"></i><p style="font-size: 12px; text-align: center;">Streamlit</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-flask"></i><p style="font-size: 12px; text-align: center;">Tabluea</p></a>
-                                        </div>
-                                    </ul>
-                            </div>
-                        </div>
-                <div class="row">
-                            <div class="col-sm-6">
-                                <div class="subheading mb-3">DevOps Tools</div>
-                                    <ul class="list-inline dev-icons">
-                                        <div class="list-inline-item">
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-linux"></i><p style="font-size: 12px; text-align: center;">Linux</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-amazonaws"></i><p style="font-size: 12px; text-align: center;">AWS</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-docker"></i><p style="font-size: 12px; text-align: center;">Docker</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-kubernetes"></i><p style="font-size: 12px; text-align: center;">Kubernetes</p></a>
-                                            <a class="list-inline-item" style="font-size: 40px;"><i class="icon-git"></i><p style="font-size: 12px; text-align: center;">Git</p></a>
-                                        </div>
-                                    </ul>
-                        </div>
-                </div>
+<section id="skills">
+<h4>Skill</h4>
+<hr>
+    <div class="row clearfix">
+        <div class="col-xs-12 col-sm-12 col-md-5 no-print">
+            <div class="subheading mb-3">Programing Languages</div>
+            <div class="list-inline-item">
+                <a class="list-inline-item" style="font-size: 40px;"><i class="fab fa-python"></i><p style="font-size: 12px; text-align: center;">Python</p></a>
         </div>
     </div>
-</div></div></section>
+    <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
+        <div class="subheading mb-3">Bigdata Tools</div>
+        <div class="list-inline-item">
+            <a class="list-inline-item" style="font-size: 40px;">
+            <img
+                src="assets/images/spark.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                width="50"
+                height="50"
+                /><p style="font-size: 12px; text-align: center;">Spark</p></a>
+            <a class="list-inline-item" style="font-size: 40px;">
+                <img src="assets/images/kafka.svg" alt="kafka" style="width: 50px; height: 50px;">
+                <p style="font-size: 12px; text-align: center;">kafka</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-5 no-print">
+        <div class="subheading mb-3">Database</div>
+        <div class="list-inline-item">
+            <a class="list-inline-item" style="font-size: 40px;"><img
+                src="assets/images/mssql.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                width="50"
+                height="50"
+                /><p style="font-size: 12px; text-align: center;">MsSQL</p></a>
+            <a class="list-inline-item" style="font-size: 40px;"><img
+                src="assets/images/mongodb.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                width="50"
+                height="50"
+                /><p style="font-size: 12px; text-align: center;">MongoDB</p></a>
+            <a class="list-inline-item" style="font-size: 40px;"><img
+                src="assets/images/redshift.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                width="50"
+                height="50"
+                /><p style="font-size: 12px; text-align: center;">Redshift</p></a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
+        <div class="subheading mb-3">Data Analysis & Visualization</div>
+        <div class="list-inline-item">
+            <a class="list-inline-item" style="font-size: 40px;">
+                <img src="assets/images/streamlit.svg" alt="Streamlit" style="width: 50px; height: 50px;">
+                <p style="font-size: 12px; text-align: center;">Streamlit</p>
+            </a>
+            <a class="list-inline-item" style="font-size: 40px;">
+                <img src="assets/images/tableau.svg" alt="Tabluea" style="width: 50px; height: 50px;">
+                <p style="font-size: 12px; text-align: center;">Tabluea</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-5 no-print">
+        <div class="subheading mb-3">DevOps Tools</div>
+        <div class="list-inline-item">
+            <a class="list-inline-item" style="font-size: 40px;"><img
+                src="assets/images/aws.svg"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+                width="50"
+                height="50"
+                /><p style="font-size: 12px; text-align: center;">AWS</p></a>
+            <a class="list-inline-item" style="font-size: 40px;">
+                <img src="assets/images/docker.svg" alt="Docker" style="width: 50px; height: 50px;">
+                <p style="font-size: 12px; text-align: center;">Docker</p>
+            </a>
+            <a class="list-inline-item" style="font-size: 40px;">
+                <img src="assets/images/k8s.svg" alt="Kubernetes" style="width: 50px; height: 50px;">
+                <p style="font-size: 12px; text-align: center;">Kubernetes</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
+        <div class="subheading mb-3"></div>
+        <div class="list-inline-item">
+        </div>
+    </div>
+</div>
+</section>
 
 </div>
 
@@ -126,10 +168,25 @@ comments: False
 <div class="col-md-4">
 
 <div class="sticky-top sticky-top-80">
-<h5>더 알고 싶으시다면?</h5>
+<div class="contact">
+<h5>💡 Contact</h5>
+<hr>
+<div class="contact-item">
+    <i class="fab fa-github"></i> Github: <a href="https://github.com/Kimuksung" target="_blank">https://github.com/Kimuksung</a>
+</div>
+<div class="contact-item">
+    🗃️ Portfolio: <a href="https://economic-element-fbb.notion.site/resume-45a7c80083734a6689e2b391f25acbdc" target="_blank">Portfolio-link</a>
+</div>
+<div class="contact-item">
+    📭 Email: <a href="mailto:kimuksung2@daum.net">kimuksung2@daum.net</a>
+</div>
+<div class="contact-item">
+    📞 Phone: 010-4393-9492
+</div>
 
-<p>Github Link : <a target="_blank" href="https://github.com/Kimuksung/Kimuksung"> My Github <i class="fab fa-github"></i></a>.</p>
-<p>Portfolio Link : <a target="_blank" href="https://economic-element-fbb.notion.site/resume-45a7c80083734a6689e2b391f25acbdc"> Portfolio <i class="simple-icons:notion"></i></a></p>
+
 </div>
 </div>
 </div>
+</div>
+
