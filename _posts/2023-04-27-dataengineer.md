@@ -2,9 +2,9 @@
 layout: post
 title:  "Data Engineer란?"
 author: Kimuksung
-categories: [ dataengineer, tutorial ]
+categories: [ dataengineer ]
 tags: [profile, portfolio]
-image: assets/images/12.jpg
+image: assets/images/dataengineering.jpeg
 # feature tab 여부
 featured: true
 # story에서 보이게 할지 여부
@@ -15,21 +15,23 @@ comments: False
 
 <!-- 스포일러 추가 시 <span class="spoiler"> </span>  -->
 안녕하세요
-오늘은 데이터 엔지니어 직무 소개
-Director Roland Suso Richter's enigmatic psychological thriller (direct to video/DVD) was based upon screenwriter Michael Cooney's own play "Point of Death" - a title that gave away the film's entire plot twist premise.
 
-As in many similar films, such as Jacob's Ladder (1990), Soul Survivors (2001), and The Butterfly Effect (2004), events and people were thoroughly distorted and confused because the protagonist was at the point of death. The tagline was misleading:
+오늘은 데이터 엔지니어 직무 소개해드리려고 합니다.
 
-"When You Don't Have a Memory, How Can You Remember Who to Trust?"
+**데이터 플랫폼 구축 데이터 가공 및 제공**
 
-The mind-warping film opened with a hospital patient Simon Cable (Ryan Phillippe) awakening in a hospital with little knowledge (amnesia perhaps?) of what had happened, and why he was there, etc. He was told by attending Dr. Jeremy Newman (Stephen Rea) that it was July 29, 2002 (Simon thought it was the year 2000 - he was confused - he heard a doctor say 20:00 hours!) and that he had died for two minutes from cardiac arrest following the near-fatal accident -- but he had been revived ("You're as good as new"). Dr. Newman: "Simon, this is the 29th of July. The year is 2002. And your wife, whose name is Anna, is waiting outside." 
+- 데이터 자체에 집중하는 직무
+- 자사 내부 raw data, 외부 데이터 수집
+- 데이터 내부 Process 진행 및 관리
+- 조직 내 다른 구성원이 데이터를 잘 활용,관리하도록
+- 마케팅,분석가,ML 필요한 데이터를 분석할 수 있도록 시스템 관리(인프라 구축)
+- 대시보드를 구성
 
-(The doctor left off four crucial additional words, revealed in the film's ending.) (Spoiler: Simon had died and was not resuscitated!).
 
-A major clue to everything that truly happened was the scene that played next under the credits - hospital staff failed to bring a patient back to life with a defibrillator after a car accident. Chest compressions failed and there was no pulse. A second major clue was provided by hospital orderly Travis (Stephen Graham): Everybody dies. No mystery there. But why and how everyone dies. Now, there's a mystery worth solving. Probably the biggest mystery there is.
+##### 업무
 
-#### So how do we do spoilers?
-
-```html
-<span class="spoiler">My hidden paragraph here.</span>
-```
+1. 서비스의 다양한 곳에서 발생하는 정형,비정형 데이터 수집
+2. 배치/실시간 파이프라인 구축 및 운영
+3. OLAP(데이터 레이크/데이터 웨어하우스)를 통해 메인 서버 부하 분산 및 데이터 분석을 위한 데이터 마트 운영
+4. 대용량의 데이터 가공을 통해 실제 서비스 혹은 분석에 사용 될 수 있는 데이터 마트 구축
+5. 데이터 기반 서비스 제공 및 서빙 담당
