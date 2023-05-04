@@ -74,7 +74,8 @@ $ aws --version
     - VPC, InternetGateway
         - value 값에 맞추어 VPC,InternetGateway 생성합니다.
     - NatGateway 
-        - PublicSubnet과 종속하여 연결
+        - Public Subnet에 추가하여 연결
+        - Private Subnet을 외부와 연결해주기 위한 용도
     - RouteTable
         - public 1개
         - private 2개
