@@ -79,3 +79,45 @@ $ history | tail -5
 ```bash
 $ wget url
 ```
+
+##### wget
+### NC
+
+---
+
+Netcat = nc로 TCP/UDP을 사용하여 서버 연결 확인 및 서버가 되어 확인 가능하다.
+
+- 서버에 연결여부 확인
+    - nc [서버 IP] [대상 PORT]
+    - nc -v [서버 IP] [PORT] = -v 옵션은 상세한 정보 요청
+    - nc -zv [IP,URL] [PORT] = Connection 연결 없이 report
+        
+        ```bash
+        $ nc ip port
+        > 
+        #성공
+        대기상태
+        #실패
+        Ncat: No route to host.
+        
+        $ nc -v ip port
+        > 
+        #성공
+        Ncat: Version x.xx
+        Ncat: Connected to ip:port.
+        #실패
+        Ncat: No route to host.
+        
+        $ nc -zv ip port
+        ```
+        
+- 서버가 되어 연결 여부 확인
+    - nc -l [PORT] = 서버 구성
+    
+    ```bash
+    # Server
+    $ nc -l 30000
+    
+    $ Client
+    $ nc ip port
+    ```
