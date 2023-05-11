@@ -6,8 +6,47 @@ categories: [ Linux ]
 tags: [ Linux ]
 # 댓글 기능
 comments: False
+image: "https://ifh.cc/g/1dT5w9.jpg"
 ---
 
+리눅스 사용하면서 썻던 명령어들을 정리하여두었습니다.  
+  
+##### globs
+---
+Glob Patterns로, 패턴 매칭 역할.
+- `?`
+    - 정확하게 한글자만 매칭
+    - a,ab,ac,ad,abc,abcd 파일이 있다고 할 때 → ab,ac,ad 파일만 표현
+        
+        ```bash
+        $ ls data/ma??.txt
+        > data/main.txt, data/mail.txt ..
+        ```
+        
+- `*`
+    - 문자열의 길이와 상관없이 어떤 문자열과 부합(공백 포함)
+    - 특수 기호 = linux `/`, window `\` 은 제외
+    - a,ab,abc,abc.txt,abc.mp3 → 모든 파일을 다 찾을 수 있다.
+    
+    ```bash
+    $ ls a*
+    ```
+    
+- `**`
+    - 0개 이상의 하위 Directory를 매칭시켜 검색
+    - 하위 디렉토리 아래에서 특정 데이터를 찾고 싶은 경우
+    
+    ```bash
+    $ ls **/*.md
+    ```
+    
+- `{}`
+    - 선택지를 모두 합쳐서 찾을 때
+    
+    ```bash
+    $ ls {*.md,*.MD}
+    ```
+    
 ##### grep
 ---
 
@@ -24,11 +63,12 @@ $ grep "abc" test.txt
 
 - http를 활용하여 return 값 확인
 - -o = 명령 결과 저장
-- -s  = silent
-
+- -s = silent
+- -L = Redirect Header를 무시
 ```bash
 $ curl "www.google.com"
 $ curl -s https://api.github.com/repos/prometheus/prometheus/releases/latest | grep browser_download_url
+$ curl -o /tmp/launches.json -L url
 ```
 
 ##### cut
