@@ -10,12 +10,13 @@ comments: False
 ---
 
 ##### Namespace란?
-
 ---
-
 - 특정한 Object를 이름에 따라 구분할 수 있는 범위
 - Python은 모든 것들을 Object로 관리한다고 말씀드렸는데,
 - 특정 이름과 Object를 Mapping 관계를 **`Dictionary`** 형태로 가지고 있다.
+- 각 Namespace는 딕셔너리 형태로 구현되며, Namespace의 Value는 Object를 가르킨다.
+- Built-in은 Namespace에 함부로 추가,삭제 불가
+- 결론 : 네임스페이스가 다르다면, 값을 참조할 수 없다.
 
 우선 순위 built-in > global > local
 
@@ -68,10 +69,10 @@ comments: False
     
 
 ![https://ifh.cc/g/CTRxAd.jpg](https://ifh.cc/g/CTRxAd.jpg)
+![https://ifh.cc/g/BxYCOG.png](https://ifh.cc/g/BxYCOG.png)
 
 ##### Global()
-
----
+--
 
 - Global 변수에 접근 가능하게 만들어준다.
 
