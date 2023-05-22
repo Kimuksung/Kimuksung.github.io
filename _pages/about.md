@@ -13,10 +13,11 @@ comments: False
 <i class="fa fa-envelope" aria-hidden="true"></i> kimuksung2@daum.net</p>
 
 <p>
-<li> 데이터 엔지니어로 일하는 중입니다.</li>
-<li> 분산 처리 시스템,과정에 관심이 많습니다.</li>
-<li> 반복적인 업무 자동화하며 동일한 작업이더라도 알고리즘,메모리 신경을 신경 써 작업합니다.</li>
-<li> 상호간에 소통 특히 피드백을 중요시하며 상대방을 항상 존중합니다.</li>
+<li> 분산 시스템에 관심이 많은 데이터 엔지니어입니다.</li>
+<li> 더욱 더 성장하기 위해 데이터와 관련된 책,블로그를 꾸준히 읽고 있습니다.</li>
+<li> 매번 Why?를 생각하며, 장단점을 고려하여 상황에 맞는 최선의 선택을 하고자 노력합니다.</li>
+<li> 반복적인 업무는 자동화하며 동일한 작업이더라도 알고리즘,메모리 관점에서 생각하고 있습니다.</li>
+<li> 더 효율적이고 직관적인 코드 방법을 고민하고 있습니다.</li>
 <li> 주 언어는 Python이며, 현재는 Kubernetes, EMR(Spark)를 학습 중에 있습니다.</li>
 </p>
 <p></p>
@@ -33,9 +34,9 @@ comments: False
     </div>
 <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
     <ul style="font-size: 18px;">
-        <li>AWS 데이터 플랫폼 구축 및 운영</li>
-        <li>ETL,ELT 파이프라인 구성 및 Airflow 배치 작업 자동화</li>
+        <li>AWS 데이터 플랫폼 구축</li>
         <li>OLAP(Data Warehouse,DataMart) 설계 및 구축</li>
+        <li>ETL,ELT 파이프라인 구성 및 Airflow 배치 작업 자동화</li>
         <li>데이터 대시보드 시각화 </li>
         <li>Gpt Model을 활용한 CS업무 지원 </li>
     </ul>
