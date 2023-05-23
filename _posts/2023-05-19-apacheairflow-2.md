@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Data Pipeline with apache airflow Chatper1"
+title:  "Data Pipeline with apache airflow Chatper2 (DAG, Operator, Task)"
 author: Kimuksung
 categories: [ Airflow ]
-tags: [ Airflow ]
+tags: [ Airflow, DAG, Operator, Task ]
 image: assets/images/airflow.png
 # 댓글 기능
 comments: False
