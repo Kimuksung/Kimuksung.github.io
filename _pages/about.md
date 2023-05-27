@@ -13,12 +13,12 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
 </p>
 
 <p>
-신뢰성 있는 데이터 구축과 운영에 많은 관심을 가지고 있으며, <strong>자동화 파이프라인</strong>> 구축과 <strong>NoSQL, RDBMS</strong> 경험을 통해 다양한 데이터 구조를 효과적으로 관리해왔습니다.<br>
+신뢰성 있는 데이터 구축과 운영에 많은 관심이 있으며, <strong>자동화 파이프라인</strong> 구축과 <strong>NoSQL, RDBMS</strong> 경험을 통해 다양한 데이터 구조를 효과적으로 관리해왔습니다.<br>
 <strong>회사와 팀을 위한 개발</strong>에 중점을 두고 있으며, 사용자와 비즈니스에 대한 이해도를 높이기 위한 주요 지표 구성과 대시보드 웹 배포, 그리고 서비스 환경에서 API의 응답 속도를 개선하고 장애에 대응한 경험이 있습니다.
 </p>
 
 <p>
-현재는 비지니스 지표를 활용한 방향성, 데이터와 클라우드 인프라 운영,관리를 주요 업무로 하고 있습니다.
+현재는 비즈니스 지표를 활용한 방향성, 데이터와 클라우드 인프라 운영,관리를 주요 업무로 하고 있습니다.
 </p>
 
 <br>
@@ -36,10 +36,10 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
     </div>
 <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
     <ul style="font-size: 18px;">
-        <li>전사의 데이터 인사이트 확보를 위한 유저와 비지니스 주요 지표 적재 및 시각화 구성</li>
+        <li>전사의 데이터 인사이트 확보를 위한 유저와 비즈니스 주요 지표 적재 및 시각화 구성</li>
         <li>AWS 클라우드를 이용한 데이터 인프라 구축 (Redshift, S3, <a href="https://kimuksung.github.io/mwaa-install/">Airflow</a>, RDS, <a href="https://kimuksung.github.io/1.1_install_spark/">EMR</a>, <a href="https://kimuksung.github.io/aws-network/">VPC</a>, <a href="https://kimuksung.github.io/aws-credentials/">IAM</a>)</li>
         <li>Airflow, Hevo, Spark를 사용하여 OLAP 구성과 자동화 파이프라인 구현</li>
-        <li>Chat-GPT 모델링 활용하여 고객 서비스 업무 속도 6% 향상</li>
+        <li>Chat-GPT 모델링 활용하여 고객 서비스 응대 업무 속도 6% 향상</li>
     </ul>
     </div>
 </div>
@@ -158,118 +158,10 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
     <li>㈜유니윌  - 파이썬과 R을 활용한 빅데이터 플랫폼 전문가 양성 과정 ( 2020.02 ~ 2020.07 )</li>
 </div>
 <br>
-
-
-<!--
-<section id="skills">
-<h4>Skill</h4>
-<hr>
-    <div class="row clearfix">
-        <div class="col-xs-12 col-sm-12 col-md-5 no-print">
-            <div class="subheading mb-3">Programing Languages</div>
-            <div class="list-inline-item">
-                <a class="list-inline-item" style="font-size: 40px;"><i class="fab fa-python"></i><p style="font-size: 12px; text-align: center;">Python</p></a>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
-        <div class="subheading mb-3">Bigdata Tools</div>
-        <div class="list-inline-item">
-            <a class="list-inline-item" style="font-size: 40px;">
-            <img
-                src="assets/images/spark.png"
-                alt=""
-                loading="lazy"
-                class="icon icon-card"
-                width="50"
-                height="50"
-                /><p style="font-size: 12px; text-align: center;">Spark</p></a>
-            <a class="list-inline-item" style="font-size: 40px;">
-                <img src="assets/images/kafka.svg" alt="kafka" style="width: 50px; height: 50px;">
-                <p style="font-size: 12px; text-align: center;">kafka</p>
-            </a>
-        </div>
-    </div>
 </div>
-<div class="row clearfix">
-    <div class="col-xs-12 col-sm-12 col-md-5 no-print">
-        <div class="subheading mb-3">Database</div>
-        <div class="list-inline-item">
-            <a class="list-inline-item" style="font-size: 40px;"><img
-                src="assets/images/mssql.svg"
-                alt=""
-                loading="lazy"
-                class="icon icon-card"
-                width="50"
-                height="50"
-                /><p style="font-size: 12px; text-align: center;">MsSQL</p></a>
-            <a class="list-inline-item" style="font-size: 40px;"><img
-                src="assets/images/mongodb.svg"
-                alt=""
-                loading="lazy"
-                class="icon icon-card"
-                width="50"
-                height="50"
-                /><p style="font-size: 12px; text-align: center;">MongoDB</p></a>
-            <a class="list-inline-item" style="font-size: 40px;"><img
-                src="assets/images/redshift.svg"
-                alt=""
-                loading="lazy"
-                class="icon icon-card"
-                width="50"
-                height="50"
-                /><p style="font-size: 12px; text-align: center;">Redshift</p></a>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
-        <div class="subheading mb-3">Data Analysis & Visualization</div>
-        <div class="list-inline-item">
-            <a class="list-inline-item" style="font-size: 40px;">
-                <img src="assets/images/streamlit.svg" alt="Streamlit" style="width: 50px; height: 50px;">
-                <p style="font-size: 12px; text-align: center;">Streamlit</p>
-            </a>
-            <a class="list-inline-item" style="font-size: 40px;">
-                <img src="assets/images/tableau.svg" alt="Tabluea" style="width: 50px; height: 50px;">
-                <p style="font-size: 12px; text-align: center;">Tabluea</p>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="row clearfix">
-    <div class="col-xs-12 col-sm-12 col-md-5 no-print">
-        <div class="subheading mb-3">DevOps Tools</div>
-        <div class="list-inline-item">
-            <a class="list-inline-item" style="font-size: 40px;"><img
-                src="assets/images/aws.svg"
-                alt=""
-                loading="lazy"
-                class="icon icon-card"
-                width="50"
-                height="50"
-                /><p style="font-size: 12px; text-align: center;">AWS</p></a>
-            <a class="list-inline-item" style="font-size: 40px;">
-                <img src="assets/images/docker.svg" alt="Docker" style="width: 50px; height: 50px;">
-                <p style="font-size: 12px; text-align: center;">Docker</p>
-            </a>
-            <a class="list-inline-item" style="font-size: 40px;">
-                <img src="assets/images/k8s.svg" alt="Kubernetes" style="width: 50px; height: 50px;">
-                <p style="font-size: 12px; text-align: center;">Kubernetes</p>
-            </a>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
-        <div class="subheading mb-3"></div>
-        <div class="list-inline-item">
-        </div>
-    </div>
-</div>
-</section>
-
-</div>
-
 
 
 <div class="col-md-4">
-
 <div class="sticky-top sticky-top-80">
 <div class="contact">
 <h5>💡 Contact</h5>
@@ -278,7 +170,7 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
     <i class="fab fa-github"></i> Github: <a href="https://github.com/Kimuksung" target="_blank">https://github.com/Kimuksung</a>
 </div>
 <div class="contact-item">
-    🗃️ Portfolio: <a href="https://economic-element-fbb.notion.site/resume-45a7c80083734a6689e2b391f25acbdc" target="_blank">Portfolio-link</a>
+    🗃️ Portfolio: <a href="https://economic-element-fbb.notion.site/9e87314fa5f142298afecf6c12b91f65" target="_blank">Portfolio-link</a>
 </div>
 <div class="contact-item">
     📭 Email: <a href="mailto:kimuksung2@daum.net">kimuksung2@daum.net</a>
@@ -293,4 +185,3 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
 </div>
 </div>
 
--->
