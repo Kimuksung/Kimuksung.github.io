@@ -13,8 +13,8 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
 </p>
 
 <p>
-신뢰성 있는 데이터 구축과 운영에 많은 관심이 있으며, <strong>자동화 파이프라인</strong> 구축과 <strong>NoSQL, RDBMS</strong> 경험을 통해 다양한 데이터 구조를 효과적으로 관리해왔습니다.<br>
-<strong>회사와 팀을 위한 개발</strong>에 중점을 두고 있으며, 사용자와 비즈니스에 대한 이해도를 높이기 위한 주요 지표 구성과 대시보드 웹 배포, 그리고 서비스 환경에서 API의 응답 속도를 개선하고 장애에 대응한 경험이 있습니다.
+신뢰성 있는 데이터 구축과 운영에 관심이 많고, 다양한 방법으로 경험,기여하려고 노력합니다. 이외에도 강의를 들으며, 개인 개발 블로그를 통해 250개 정도의 포스트를 작성했습니다. 언제나 데이터를 잘 다루고 싶으며, 실시간으로 최소 100만여건의 데이터를 다루는 목표를 가지고 다양한 기술을 학습하거나 사용하고 경험을 쌓고 있습니다.<br>
+엔지니어란 결국 데이터를 통해 비즈니스의 방향성을 빠르게 커뮤니케이션하는 것이 중요하다고 생각하고 있습니다. 능동적이고 적극적인 커뮤니케이션으로 문제 해결과 비즈니스 발전을 모색합니다. 이러한 점을 바탕으로 더 좋은 데이터 엔지니어로 성장하기 위해 학습하고, 경험하고, 노력하고 있습니다.
 </p>
 
 <p>
@@ -61,15 +61,6 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
         <li>2021 상반기 <strong>우수사원</strong> 수상</li>
     </ul>
     </div>
-</div>
-<br>
-
-<h4>Other Experience</h4>
-<hr>
-<div>
-    <li>항공대학교 종합 설계 프로젝트 - 경진대회 치과 의사 서비스 매칭 시스템 (금상)</li>
-    <li>삼성 취식 데이터 - EDA 및 시각화</li>
-    <li>Kakao Brunch 데이터 - EDA 및 시각화</li>
 </div>
 <br>
 
@@ -127,6 +118,7 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
     <div class="col-xs-12 col-sm-12 col-md-5 no-print">
         <h5 class="mb-0">개인 블로그</h5>
         <div style="font-style: italic; margin-bottom: 0px;">https://kimuksung.github.io/</div>
+        <div style="font-style: italic; margin-bottom: 0px;">https://dortmoot.tistory.com/</div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-7 col-print-12">
         <ul style="font-size: 18px;">
@@ -158,7 +150,16 @@ Python/MSSQL, MongoDB, Redshift /AWS 기반의 데이터 엔지니어로 일별 
     <li>㈜유니윌  - 파이썬과 R을 활용한 빅데이터 플랫폼 전문가 양성 과정 ( 2020.02 ~ 2020.07 )</li>
 </div>
 <br>
+
+<h4>ETC</h4>
+<hr>
+<div>
+    <li>항공대학교 종합 설계 프로젝트 - 경진대회 치과 의사 서비스 매칭 시스템 (금상)</li>
 </div>
+
+</div>
+
+
 
 
 <div class="col-md-4">
