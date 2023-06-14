@@ -10,7 +10,13 @@ image: "https://ifh.cc/g/1dT5w9.jpg"
 ---
 
 리눅스 사용하면서 썻던 명령어들을 정리하여두었습니다.  
-  
+
+
+##### ‘>’ 와 ‘>>’
+---
+- `>` : 명령어 뒤에 나오는 File에 Write or Overwrite
+- `>>` : 명령어 뒤에 나오는 파일에 추가할 때 사용 Append
+
 ##### globs
 ---
 Glob Patterns로, 패턴 매칭 역할.
@@ -55,12 +61,11 @@ Glob Patterns로, 패턴 매칭 역할.
 
 ```bash
 $ grep "abc" test.txt
+$ echo 'test 123' > test.txt & cat test.txt | grep 12
 ```
 
 ##### curl
-
 ---
-
 - http를 활용하여 return 값 확인
 - -o = 명령 결과 저장
 - -s = silent
