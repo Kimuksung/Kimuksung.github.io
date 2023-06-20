@@ -11,7 +11,7 @@ comments: False
 AWS RDS Mysql과 Spark를 연결하는 과정에서 많은 애로사항을 겪었고 이를 간략하게 정리하여 봅니다.
 
 ssh를 통한 연결 방법은 추가적으로 업데이트 할 예정입니다.
-
+* 업데이트 내용 : 6/20 - jdbc 파일 연결 방법 추가
 필수적인 순서는 다음과 같습니다.
 1. JDBC 다운
 2. Create Session
@@ -45,14 +45,19 @@ ssh를 통한 연결 방법은 추가적으로 업데이트 할 예정입니다.
 ---
 - Session 연결 시 Driver를 연결해야주어야 하는데 아래 2가지가 존재하는 것으로 이해하였습니다.
 - spark.jars = 드라이버 파일을 명시적으로 로드, Cluster Node에 존재하는 jar파일 경로를 넣어 연동
-    
+- *추가 - 쥬피터에서 jar 파일을 찾을 때에는 python의 현재위치부터 주어져야합니다.
+- 현재 jar 파일은 - opt/workspace/spark_test/jars에 들어있습니다.
+
     ```python
     from pyspark.sql import SparkSession
     
     # Create SparkSession
-    spark = SparkSession.builder \
-               .appName('test') \
-               .config("spark.jars", "mount-directory/aws-mysql-jdbc-1.0.0.jar").getOrCreate()
+    spark = SparkSession.\
+        builder.\
+        appName("pyspark-notebook").\
+        master("spark://spark-master:7077").\
+        config("spark.jars", "jars/mysql-connector-java-8.0.27.jar").\
+        getOrCreate()
     ```
     
 - spark.driver.extraClassPath
