@@ -116,11 +116,16 @@ services:
 ---
 - Docker-compose 파일을 활용
 - 요구 사항에 맞추어 Python과 Python Library 설치
-
+- 추가 사항 - Docker Container 시간 설정 != jenkins 서버 시간 설정
 ```python
 $ sudo apt install docker-compose
 $ mkdir jenkins
 $ cd jenkins
+```
+
+```
+# docker container 시간 설정 파일 동기화 필요 시 추가
+$ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 ```
 
 ```python
