@@ -46,7 +46,7 @@ ssh를 통한 연결 방법은 추가적으로 업데이트 할 예정입니다.
 - Session 연결 시 Driver를 연결해야주어야 하는데 아래 2가지가 존재하는 것으로 이해하였습니다.
 - spark.jars = 드라이버 파일을 명시적으로 로드, Cluster Node에 존재하는 jar파일 경로를 넣어 연동
 - *추가 - 쥬피터에서 jar 파일을 찾을 때에는 python의 현재위치부터 주어져야합니다.
-- 현재 jar 파일은 - opt/workspace/spark_test/jars에 들어있습니다.
+- 현재 jar 파일은 - opt/workspace/spark_test/jars에 들어있습니다. [참조] - (https://stackoverflow.com/questions/2983248/com-mysql-jdbc-exceptions-jdbc4-communicationsexception-communications-link-fai)
 
     ```python
     from pyspark.sql import SparkSession
