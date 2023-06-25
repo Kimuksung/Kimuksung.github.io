@@ -29,3 +29,4 @@ Client가 Data를 저장할 때 여러 곳에 분산처리하여 저장한다.
 ![t1](https://i.ibb.co/Ss5GdmD/image.gif)
 ![t2](https://i.ibb.co/YyZgL6g/rack-placmement-policy-hdfs.png)
 ![t3](https://i.ibb.co/kyt9Xmp/image.jpg)
+
