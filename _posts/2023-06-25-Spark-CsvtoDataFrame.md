@@ -11,10 +11,8 @@ comments: False
 
 RDD에 이어 더 간편하게 사용가능한 Sparksession의 Dataframe 기능을 사용해보려고 합니다.
 
-### 1. Read CSV
-
+##### 1. Read CSV
 ---
-
 - sparksession에서 지원하여 주는 dataframe을 사용
 - 데이터를 바라보고 타입을 유추
 - `Schema Option` = 원하는 데이터 Schema가 있다면 세팅이 가능하다.
@@ -63,10 +61,8 @@ RDD에 이어 더 간편하게 사용가능한 Sparksession의 Dataframe 기능�
     ```
     
 
-### 2. mapping
-
+##### 2. mapping
 ---
-
 - Dataframe은 별도의 Map 기능이 존재하지 않는다.
 - 대신, 기존 데이터를 변경가능한 `withColumn`과 `col`을 통해 데이터를 mapping 가능하다.
 - 특정 칼럼만 추출하고 싶은 경우 `select`를 사용한다.
@@ -84,3 +80,32 @@ RDD에 이어 더 간편하게 사용가능한 Sparksession의 Dataframe 기능�
     
     map_df.show(5)
     ```
+
+##### 3. Reduce
+---
+- 날짜 별 결제 데이터와 금액이 있다고 하였을 때 같은 년,월 데이터인 경우를 뽑아보려고 합니다.
+- `date_format`을 활용하여 년,월 데이터로 변경
+- `group by`, `sort` 함수를 활용하여 집계,정렬
+
+```python
+from pyspark.sql.types import StructType, StructField
+from pyspark.sql.types import DoubleType, IntegerType, StringType, TimestampType
+from pyspark.sql.functions import date_format, col
+
+df = spark.read.csv(file_dir+file_name, header=True, schema=schema)
+# change column type
+df = df.withColumn("change_created_at",  date_format(col("created_at"), "yyyy-MM"))
+# select specific dataframe
+df = df.select(["change_created_at", "money_paid"])
+df.show(5)
+
+# reduce
+df.groupBy("change_created_at").sum("money_paid").show(5)
+# sort asc
+df.sort("change_created_at",col("money_paid").asc()).show(5)
+# sort desc
+df.sort("change_created_at",col("money_paid").desc()).show(5)
+
+```
+
+![result](https://i.ibb.co/NTGBf9t/2023-06-25-1-18-57.png)

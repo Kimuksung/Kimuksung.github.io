@@ -72,7 +72,8 @@ Spark 기본 연동도 마쳤으니 RDD와 Dataframe을 상세히 써보려고 �
     
 - 추가적으로 칼럼별 타입 변경 처리입니다.
 - 비어있는 값에 대해 예외처리를 해주었습니다.
-- 문제점이 Json 데이터가 들어있는 경우 `,`를 기준으로 나누기 때문에 Json 내부 데이터가 각 칼럼으로 파싱된다는 점입니다. 차후에 개선한 코드를 올릴 예정입니다.
+- 문제점이 Json 데이터가 들어있는 경우 `,`를 기준으로 나누기 때문에 Json 내부 데이터가 각 칼럼으로 파싱된다는 점입니다.
+- dataframe을 활용하여 shcema를 지정하고 값을 부르게 되면 더 편하게 사용 가능하기 때문에 이부분은 넘어가겠습니다.
     
     ```bash
     rdd = sc.textFile(file_dir + file_name)
@@ -107,5 +108,54 @@ Spark 기본 연동도 마쳤으니 RDD와 Dataframe을 상세히 써보려고 �
 
 ##### 3. Reduce
 ---
-- mapping한 데이터를 원하는 결과로 묶어주어야합니다.
-- reducebykey 등의 작업이 있으며 추가로 작업하여 업로드 예정입니다.
+- RDD에서는 아래 두 함수를 이용하여 원하는 결과값을 도출합니다.
+- `reducebykey` = mapping한 데이터를 원하는 결과로 묶어줍니다.
+- `sortbykey` = 원하는 Key 값을 기준으로 정렬
+    
+    ```python
+    # CSV -> RDD
+    # RDD를 활용한 reducebykey-sortbykey
+    from pyspark.rdd import RDD
+    from operator import add
+    
+    sc = spark.sparkContext
+    file_dir = "datas/"
+    file_name = "payment-test.csv"
+    
+    data_map = {
+        'created_at' : lambda x: x[:7],
+        'money_paid' : int
+    }
+    
+    column_list = ['created_at', 'money_paid']
+    rdd = sc.textFile(file_dir+file_name)
+    header = rdd.first()
+    
+    data_rdd = rdd.filter(lambda x: x!= header)
+    
+    # column_name -> index 접근
+    header_list = header.split(",")
+    index_list = [header_list.index(column_name) for column_name in column_list]
+    
+    map_rdd = data_rdd.map(
+        lambda x:tuple( data_map[column_name](x.split(",")[index]) for index, column_name in zip(index_list, column_list))
+    )
+    
+    print( f'map_rdd : {isinstance(map_rdd, RDD)}')
+    reduce_rdd = map_rdd.reduceByKey(lambda a,b: a+b)
+    print( f'reduce_rdd : {isinstance(reduce_rdd, RDD)}')
+    sortby_rdd = reduce_rdd.sortByKey(True, 1)
+    print( f'sortby_rdd : {isinstance(sortby_rdd, RDD)}')
+    
+    sortby_rdd.collect()
+    >
+    map_rdd : True
+    reduce_rdd : True
+    sortby_rdd : True
+    [('2022-08', 8064000),
+     ('2022-09', 9135000),
+     ('2022-10', 7014000),
+     ('2022-11', 8267000),
+     ('2022-12', 8449000),
+     ('2023-01', 8856000)]
+    ```
