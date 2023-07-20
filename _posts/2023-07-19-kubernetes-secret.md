@@ -6,7 +6,7 @@ categories: [ K8S ]
 tags: [ K8S, Secret ]
 # 댓글 기능
 comments: False
-image: "https://i.ibb.co/c8SRf7t/k8s.png"
+image: assets/images/k8s.png
 ---
 
 앞에서 경험한 **configmap**을 통하여 **환경변수를 동기화** 시켜 사용이 가능하다.
