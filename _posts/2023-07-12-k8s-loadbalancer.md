@@ -6,7 +6,7 @@ categories: [ K8S ]
 tags: [ K8S ]
 # 댓글 기능
 comments: False
-image: "https://i.ibb.co/c8SRf7t/k8s.png"
+image: assets/images/k8s.png
 ---
 
 service의 기본 개념이 LoadBalancer 배포 방법을 알아보려고 합니다.
