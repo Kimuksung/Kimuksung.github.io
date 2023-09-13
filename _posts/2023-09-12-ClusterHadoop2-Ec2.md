@@ -122,3 +122,10 @@ $ cd $HADOOP_HOME/sbin
 $ start-dfs.sh
 $ start-yarn.sh
 ```
+
+결과는 아래와 같다.
+
+<a href="https://ibb.co/7XfRWBH"><img src="https://i.ibb.co/DtJ8CmN/Untitled-13.png" alt="Untitled-13" border="0" width=300 heigh=300></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Sdjy1B8/Untitled-9.png" alt="Untitled-9" border="0" width=300 heigh=300></a>
+<a href="https://ibb.co/4NjBFF2"><img src="https://i.ibb.co/vzJ2cch/Untitled-10.png" alt="Untitled-10" border="0" width=300 heigh=300></a>
+<a href="https://ibb.co/fFXf5Xy"><img src="https://i.ibb.co/pw1c81M/Untitled-11.png" alt="Untitled-11" border="0" width=300 heigh=300></a>
