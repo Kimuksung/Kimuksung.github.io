@@ -102,3 +102,4 @@ $ ls -al wordcount_output/*
 $ cat wordcount_output/part-r-00000
 $ rm -rf wordcount_output/
 ```
+<a href="https://ibb.co/HPz5jG5"><img src="https://i.ibb.co/94TQ7yQ/Untitled-12.png" alt="Untitled-12" border="0" width=500 ></a>
