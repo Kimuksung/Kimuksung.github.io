@@ -7,7 +7,7 @@ tags: [ hadoop ]
 # 댓글 기능
 comments: False
 # feature tab 여부
-featured: False
+featured: True
 # story에서 보이게 할지 여부
 image: assets/images/hadoop.jpeg
 ---
