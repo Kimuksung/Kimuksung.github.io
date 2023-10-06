@@ -225,7 +225,7 @@ $ bin/kafka-server-stop.sh -daemon config/server.properties
 $ sudo vi config/server.properties
 broker.id=0
 listeners=PLAINTEXT://:9092
-advertised.listeners=PLAINTEXT://15.164.231.237:9092
+advertised.listeners=PLAINTEXT://ip:9092
 zookeeper.connect=kafka1:2181,kafka2:2181
 
 $ bin/kafka-server-start.sh -daemon config/server.properties
@@ -297,7 +297,7 @@ class KafkaInfos:
             raise exc
 
 if __name__ == "__main__":
-    kafka_connection = KafkaInfos(topic='test', nodes=['15.164.231.137:9092', '13.125.182.112:9092'])
+    kafka_connection = KafkaInfos(topic='test', nodes=['public_ip:9092', 'public_ip:9092'])
     # produce
     messages = ['i am', 'ready', 'to test']
     kafka_connection.set_produce(messages)
@@ -320,14 +320,14 @@ if __name__ == "__main__":
 #before
 broker.id=0
 listeners=PLAINTEXT://:9092
-advertised.listeners=PLAINTEXT://ec2-15-164-231-137.ap-northeast-2.compute.amazonaws.com:9092
+advertised.listeners=PLAINTEXT://ec2ip-ap-northeast-2.compute.amazonaws.com:9092
 zookeeper.connect=kafka1:2181,kafka2:2181
 
 # after
 broker.id=0
 listeners=INTERNAL://0.0.0.0:19092,EXTERNAL://0.0.0.0:9092
 listener.security.protocol.map=INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
-advertised.listeners=INTERNAL://ip-172-31-66-70.ap-northeast-2.compute.internal:9092,EXTERNAL://ec2-15-164-231-137.ap-northeast-2.compute.amazonaws.com:9092
+advertised.listeners=INTERNAL://ec2-ip.ap-northeast-2.compute.internal:9092,EXTERNAL://ec2-ip.ap-northeast-2.compute.amazonaws.com:9092
 zookeeper.connect=kafka1:2181,kafka2:2181
 inter.broker.listener.name=INTERNAL
 
@@ -335,7 +335,7 @@ inter.broker.listener.name=INTERNAL
 broker.id=2
 listeners=INTERNAL://0.0.0.0:19092,EXTERNAL://0.0.0.0:9092
 listener.security.protocol.map=INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
-advertised.listeners=INTERNAL://ip-172-31-68-50.ap-northeast-2.compute.internal:9092,EXTERNAL://ec2-13-125-182-112.ap-northeast-2.compute.amazonaws.com:9092
+advertised.listeners=INTERNAL://ec2-ip.compute.internal:9092,EXTERNAL://ec2ip.ap-northeast-2.compute.amazonaws.com:9092
 zookeeper.connect=kafka1:2181,kafka2:2181
 inter.broker.listener.name=INTERNAL
 ```
