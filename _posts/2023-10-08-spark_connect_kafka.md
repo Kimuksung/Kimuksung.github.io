@@ -6,6 +6,7 @@ categories: [ Spark ]
 #blog post image
 image: assets/images/emr_spark.png
 comments: False
+featured: true
 ---
 
 Aws Instance로 Kafka클러스터를 구성한 뒤, Docker 위에 Spark를 구성하여 Hadoop으로 전송하려고 합니다.
@@ -14,46 +15,53 @@ Aws Instance로 Kafka클러스터를 구성한 뒤, Docker 위에 Spark를 구�
 
 - jar 파일로 구성 - 시도(실패) [링크](https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10_2.12/3.1.1)
 - pyspark —packages로 구성 - 시도(실패) [링크](https://saturncloud.io/blog/troubleshooting-pysparksqlutilsanalysisexception-failed-to-find-data-source-kafka/)
-- spark config jupyter로 구성 - 시도(실패)
+- spark config jupyter로 구성 - 시도(**성공**)
 - dependency 추가(이해 못함) - [링크](https://stackoverflow.com/questions/48011941/why-does-formatkafka-fail-with-failed-to-find-data-source-kafka-even-wi)
 
 스파크 버전은 3.1.1이며, scala 버전 = 2.12, Kafka = 3.0.0 입니다.
 
-시도했던 과정들을 다시 적어보며, 다시 도전해볼 예정입니다.
+Jupyter에서 pyspark로 Kafka 연결하는 방법입니다.
+
+결론은 conf에 **spark.jars.packages로 구성하여 연동은 가능**하나, local에 저장하여 구성하는 spark.jars로는 실패하였습니다. 차후에 시간이 되면 해당 부분 업데이트 하겠습니다.
 
 ##### Jar 파일 구성
 ---
 - [링크](https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10_2.12/3.1.1)에서 본인의 버전에 맞게 다운로드하여 줍니다. version이 sparkversion을 의미합니다.
     - `spark-sql-kafka-0-10_2.12-3.1.1.jar`
+    - `kafka-clients 3.2.0.jar`
+    - `spark-token-provider-kafka-0-10_2.12.3.1.1.jar`
+    - `commons_pools:2.6.2.jar`
 - Jupyter에 Jar 파일 구성
-    
-    ```bash
-    from pyspark.sql import SparkSession
-    
-    # spark version - '3.1.1'
-    # kafka version - '3.0.0'
-    
-    sc = SparkSession.\
-             builder.\
-             appName("Kafka-test").\
-             master("spark://spark-master:7077").\
-             config("spark.jars.pacakges", "jars/spark-sql-kafka-0-10_2.12-3.1.1.jar").\
-             getOrCreate()
-    
-    sc.sparkContext.setLogLevel('ERROR')
-    
-    # Subscribe to 1 topic
-    df = sc\
-      .readStream \
-      .format("kafka") \
-      .option("kafka.bootstrap.servers", "kafkaip:9092") \
-      .option("subscribe", "test") \
-      .load()
-    
-    df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
-    ```
-    
-- SPARK_HOME/jars 에 구성
+    - stackoverflow를 보면 jars 파일로는 dependecncy로 불가하다는데,, 이유를 모르겠습니다.
+    - packages에서 성공한 jars를 가지고 구성해보았습니다.
+    - https://stackoverflow.com/questions/46076771/how-to-submit-multiple-jars-to-workers-through-sparksession/46076881#46076881
+        
+        ```bash
+        from pyspark.sql import SparkSession
+            
+        jars = [
+                "kafka-clients-3.2.0.jar", 
+                "spark-sql-kafka-0-10_2.12-3.1.1.jar"
+               ]
+        jar_files = ",".join(list(map(lambda x:"/opt/workspace/spark_test/jars/kafka/"+x, jars)))
+        
+        spark = SparkSession.builder\
+           .master("local")\
+           .appName("Kafka Connection test")\
+           .config("spark.jars", jar_files)\
+           .getOrCreate()
+        
+        spark
+        ```
+        
+        ```bash
+        # upload된 파일 확인하기
+        # https://stackoverflow.com/questions/57057648/list-all-additional-jars-loaded-in-pyspark
+        print(spark.sparkContext._jsc.sc().listJars())
+        ```
+        
+- Spark Node
+    - SPARK_HOME/jars 다운로드
     
     ```bash
     $ cd $SPARK_HOME/jars
@@ -61,6 +69,8 @@ Aws Instance로 Kafka클러스터를 구성한 뒤, Docker 위에 Spark를 구�
     ```
     
     <a href="https://ibb.co/X7JWhMJ"><img src="https://i.ibb.co/gSgr5hg/Untitled-38.png" alt="Untitled-38" border="0"></a>
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/841a625d-aa66-4b40-81fe-31e8b5793fa0/85819fa9-069b-413a-9f04-8d3d112f8dbd/Untitled.png)
     
 
 ##### Pyspark option 주기
@@ -125,9 +135,79 @@ Caused by: java.lang.ClassNotFoundException: org.apache.kafka.common.serializati
 
 <a href="https://ibb.co/KGn9fcj"><img src="https://i.ibb.co/yR28Zmn/Untitled-39.png" alt="Untitled-39" border="0"></a>
 
+##### Spark Conf로 구성하기
+---
+
+- conf의 spark.jars.packages에 요청하고자 하는 값을 넣어줍니다.
+- https://github.com/OneCricketeer/docker-stacks/blob/master/hadoop-spark/spark-notebooks/kafka-sql.ipynb
+
+```bash
+from pyspark.sql import SparkSession
+
+scala_version = '2.12' 
+spark_version = '3.1.1'
+packages = [
+    f'org.apache.spark:spark-sql-kafka-0-10_{scala_version}:{spark_version}',
+    'org.apache.kafka:kafka-clients:3.2.0'
+]
+spark = SparkSession.builder\
+   .master("local")\
+   .appName("kafka-example")\
+   .config("spark.jars.packages", ",".join(packages))\
+   .getOrCreate()
+spark
+```
+
+<a href="https://ibb.co/B3QqCr3"><img src="https://i.ibb.co/XLKSC3L/Untitled-40.png" alt="Untitled-40" border="0"></a>
+
+
+```bash
+# batch
+# https://github.com/OneCricketeer/docker-stacks/blob/master/hadoop-spark/spark-notebooks/kafka-sql.ipynb
+from pyspark.sql.functions import col, concat, lit
+
+kafkaDf = spark.read.format("kafka")\
+  .option("kafka.bootstrap.servers", "kafkaip:9092")\
+  .option("subscribe", 'test')\
+  .option("startingOffsets", "earliest")\
+  .load()
+
+kafkaDf.select(
+    concat(col("topic"), lit(':'), col("partition").cast("string")).alias("topic_partition"),
+    col("offset"),
+    col("value").cast("string")
+).show()
+```
+
+<a href="https://ibb.co/Rb4kTLc"><img src="https://i.ibb.co/NCnd2wK/Untitled-41.png" alt="Untitled-41" border="0"></a>
+
+
+```bash
+# stream
+from pyspark.sql.functions import col, concat, lit
+# Read stream
+log = spark.readStream.format("kafka") \
+.option("kafka.bootstrap.servers", "kafkaip:9092") \
+.option("subscribe", "test") \
+.option("startingOffsets", "earliest") \
+.load()
+
+query = log.selectExpr("CAST(value AS STRING)") \
+.writeStream \
+.format("console") \
+.option("truncate", "false") \
+.start()
+
+query.awaitTermination()
+```
+
+<a href="https://ibb.co/Rb4kTLc"><img src="https://i.ibb.co/NCnd2wK/Untitled-41.png" alt="Untitled-41" border="0"></a>
+
+
 ##### 참조
 ---
 - https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html
 - https://taaewoo.tistory.com/78?category=926385
 - https://data-engineer-tech.tistory.com/46
 - https://velog.io/@statco19/pyspark-kafka-streaming
+- https://mj-sunflower.tistory.com/52
