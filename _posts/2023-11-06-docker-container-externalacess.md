@@ -6,6 +6,7 @@ categories: [ Docker ]
 tags: [ Docker, Mysql ]
 image: assets/images/docker.svg
 comments: False
+featured: True
 ---
 
 중간에 과제 혹은 코딩테스트를 진행하면서 글을 많이 쓰지 못하였다.  
