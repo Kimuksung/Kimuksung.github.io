@@ -15,17 +15,17 @@ comments: False
 - Executor : class defining **`How`** your tasks should be executed
 - Worker : process/subprocess **`executing`** task
 
-<img src="https://kimuksung.github.io/assets/Airflow_동작원리1.png"/>
+<img src="https://kimuksung.github.io/assets/images/Airflow_동작원리1.png"/>
 <br/>
 
-<img src="https://kimuksung.github.io/assets/Airflow_동작원리2.png"/>
+<img src="https://kimuksung.github.io/assets/images/Airflow_동작원리2.png"/>
 <br/>
 
 ##### Executors
 - Excutor에 따라 Task의 동작원리가 바뀐다.
 - 일반적으로 [Task1,Task2] → Task3로 가는 구조의 DAG가 있다고 하여보자.
 
-<img src="https://kimuksung.github.io/assets/Airflow_동작원리3.png"/>
+<img src="https://kimuksung.github.io/assets/images/Airflow_동작원리3.png"/>
 <br/>
 
 - One Node Architecture
@@ -33,14 +33,14 @@ comments: False
     - Sequential Executors
     - LocalExecutor
         
-    <img src="https://kimuksung.github.io/assets/Airflow_동작원리9.png"/>
+    <img src="https://kimuksung.github.io/assets/images/Airflow_동작원리9.png"/>
 <br/>
         
 - Multi Node Architecture
     - CeleryExecutor
     - K8sExecutor
         
-    <img src="https://kimuksung.github.io/assets/Airflow_동작원리9.png"/>
+    <img src="https://kimuksung.github.io/assets/images/Airflow_동작원리9.png"/>
 <br/>     
         
 
@@ -58,7 +58,7 @@ comments: False
         - SPOF 문제
         - Production에 적합하지 않다.
     
-    <img src="https://kimuksung.github.io/assets/Airflow_동작원리4.png"/>
+    <img src="https://kimuksung.github.io/assets/images/Airflow_동작원리4.png"/>
 <br/>
     
 - Local Executors
@@ -73,7 +73,7 @@ comments: False
         - Production 환경에 부적합
         - SPOF 문제
         
-    <img src="https://kimuksung.github.io/assets/Airflow_동작원리5.png"/>
+    <img src="https://kimuksung.github.io/assets/images/Airflow_동작원리5.png"/>
 <br/>
         
 
@@ -89,7 +89,7 @@ comments: False
         - 테스크가 없다면, resource가 낭비
         - 비용 많이 든다.
 
-    <img src="https://kimuksung.github.io/assets/Airflow_동작원리6.png"/>
+    <img src="https://kimuksung.github.io/assets/images/Airflow_동작원리6.png"/>
 <br/>
 
 - Kunbernetes Executor
@@ -104,7 +104,7 @@ comments: False
         - Task 별로 Pod 시작시키는 시간(Overhead)이 든다.
         - K8S 지식이 필요
 
-<img src="https://kimuksung.github.io/assets/Airflow_동작원리7.png"/>
+<img src="https://kimuksung.github.io/assets/images/Airflow_동작원리7.png"/>
 <br/>
 
 Architecture
