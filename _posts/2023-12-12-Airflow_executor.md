@@ -6,6 +6,7 @@ categories: [ Airflow ]
 tags: [ Airflow ]
 image: assets/images/airflow.png
 comments: False
+featured: True
 ---
 
 ##### Componenets
