@@ -83,6 +83,7 @@ Spark의 실행 모드에 따라 동작 방식을 살펴보고, 실제 AWS Emr s
 <br>
 
 ##### Spark Memory (Unified Memory)
+
 ---
 - 과거에는 Static Memory Manager가 사용되었지만, 현재는 Execution Memory 와 Storage Memory 경계선을 자유롭게 넘나들 수 있는 Unified Memory Manager 에 대해서만 설명
 - JVM에서도 On-Heap Memory Managment (In-Memory), Off-Heap Memory Managment (External-Memory) 가 존재
@@ -169,6 +170,38 @@ spark.dynamicAllocation.enabled = true 세팅 값으로 최소 executor 값이 �
     "numExecutors":10,
 }
 ```
+
+<br>
+
+##### Pyspark Memory
+
+---
+
+- 이제 Pyspark에서 동작하는 메모리에 대해 알아봅니다.
+- 위의 동작 방식은 Spark 자체의 동작 방식으로 Python이 JVM으로 동작 위해서는 Python Process가 별도로 필요합니다.
+- JVM Heap Space 이외에 Python Process가 동작할 공간을 Spark 2.3 이상에서 spark.executor.pyspark.memory, spark.executor.memoryOverhead
+값으로 설정되는 것을 볼 수 있습니다.
+- 결국 위와 같은 동작 방식 때문에 아키텍처가 살짝 바뀌게 되는데, Python <-> JVM 변환하는 과정이 필요합니다.
+- Driver process에서는 Py4j를 이용해서 JVM Process에 접근해서 SparkContext를 생성
+- 또한, Python Process <-> JVM Process는 별개의 메모리 공간에 있기 때문에 Memory Share도 불가능하여 매번 통신이 필요합니다.
+- 이 과정 때문에 Pyspark가 느린 경우가 많습니다.
+
+
+<table>
+<tr>
+<th>Pyspark Memory Env</th>
+<th>Pyspark Memory</th>
+<th>Python to JVM</th>
+<th>Pyspark flow</th>
+</tr>
+<tr>
+<td><img src="https://i.imgur.com/TG3UIsO.png" width="400"/></td>
+<td><img src="https://i.imgur.com/06aQ6Yc.png" width="400"/></td>
+<td><img src="https://i.imgur.com/xeqwZIB.png" width="400"/></td>
+<td><img src="https://i.imgur.com/0yoDwOS.png" width="400"/></td>
+</tr>
+</table>
+
 
 
 ##### 참조
