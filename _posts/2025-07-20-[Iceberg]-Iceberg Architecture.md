@@ -6,7 +6,7 @@ categories: [ DataLake, Iceberg ]
 #blog post image
 image: assets/images/iceberg.png
 comments: False
-featured: True
+featured: False
 ---
 
 <br>
